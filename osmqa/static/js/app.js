@@ -15,7 +15,7 @@ var osmqa = function() {
      * Property: usualTags
      * The list of most used tags
      */
-    var usualTags = ['highway', 'cycleway', 'building'];
+    var usualTags = ['yes','no'];
 
     /**
      * Property: sharedTags
@@ -33,7 +33,7 @@ var osmqa = function() {
      * Property: currentMapTag
      * The currently chosen tag for map display.
      */
-    var currentMapTag = 'highway';
+    var currentMapTag = 'yes';
 
     /**
      * Property: cookieName
@@ -279,14 +279,14 @@ var osmqa = function() {
         sharedTags.sort();
 
         var h2 = $('<h2 />', {
-            text: "Tags "
+            text: "Update Status "
         });
         if (window.user) {
             
             var adderText = $('<small />')
                 .append('(')
                 .append($('<a />', {
-                    text: 'add a tag',
+                    text: 'update status',
                     click: function() {
                         addTagAdder();
                         adderText.remove();
@@ -303,7 +303,7 @@ var osmqa = function() {
         var sharedList = $('<ul />', {
             "id": "sharedTags",
             "class": "tags",
-            "html": "<h3>Shared tags</h3>"
+            "html": "<h3>Complete?</h3>"
         });
         $('#results').append(sharedList);
 
@@ -317,7 +317,7 @@ var osmqa = function() {
         var unsharedList = $('<ul />', {
             "id": "unsharedTags",
             "class": "tags",
-            "html": "<h3>Unshared tags</h3>"
+            "html": ""
         });
         $('#results').append(unsharedList);
 

@@ -40,8 +40,7 @@
 
 <%def name="right()">
         <div id="maplegend">
-          <div class="label"><span class="important" style="color:green;">Green tiles</span> are considered valid regarding <span id="currentMapTag">highway</span> (click to change).</div>
-          <div class="label"><span class="important" style="color:grey;">Grey tiles</span> are considered valid for at least one other tag</div>
+          <div class="label"><span class="important" style="color:green;">Green tiles</span> current status is complete.</div>
         </div>
         <div id="tileconfig">
           <div id="tileconfighelp">
